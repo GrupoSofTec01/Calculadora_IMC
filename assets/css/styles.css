@@ -1,0 +1,263 @@
+/*#Aqui abaixo temos a importação da font "Poppins" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;500;700&display=swap');
+
+/*#Aqui tereos uma estilização generalizada de vários valores */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*#Aqui teremos toda uma estilização da tab "body" */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /*#Aqui determina que a altura da página, seja toda a altura dela */
+    height: 100vh;
+    background-color: #18181b;
+    
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#container" */
+#container{
+    display: flex;
+    align-items: center;
+    /*Aqui temos a implementação de um distanciamento de medidas iguais entre todos os itens */
+    gap: 2.5rem;    
+}
+
+/*#Aqui abaixo temos a estilização da tag "img", que está dentro do id "#img_imc" */
+#img_imc img{
+    width: 25rem;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#calculator" */
+#calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+    color: #f8fafc;
+    background-color: #262626;    
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#form" */
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#title" */
+#title{
+    font-size: 2.25rem;
+    /*#Para posicionar algo aqui, tem que colocar o "Position: relative" */
+    position: relative;
+}
+
+/*#Aqui irá criar um determinado conteúdo, após o último item que esteja dentro da "div" */
+/*#do id "#title" e neste conteúdo será aplicada toda a estilização abaixo. */
+#title::after{
+    position: absolute;
+    content: '';
+    background-color: #16a34a;
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+/*#Aqui temos uma estilização relacionada ao "label", que está dentro da classe "input-box" */
+.input-box label{
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/*#Aqui temos uma estilização relacionada a classe "input-field" */
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3f46;
+    padding: 0.2rem;
+    border-radius: 5px;
+    margin-top: 3px;    
+}
+
+/*#Aqui temos uma estilização relacionada ao "span e i", que está dentro da classe "input-field" */
+.input-field span,
+.input-field i{
+    color: #cbd5e1;
+    font-size: 1.2rem;    
+    padding: 0.3rem 1rem;
+}
+
+/*#Aqui temos uma estilização relacionada ao "input", que está dentro da classe "input-field" */
+.input-field input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #f8fafc;
+    font-style: italic;
+    padding: 0 0.5rem;
+}
+
+/*# */
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+/*#Aqui temos uma ação dentro do campo de input, quando for clicado */
+.input-field input:focus{
+    outline: none;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#calculate" */
+#calculate{
+    border: none;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #16a34a;
+    columns: #f8fafc;
+    /* padding: 0.5rem; */
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    /* margin: 10px 0px -20px 0px; */
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#result" */
+#result{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid #ffffff34;
+    padding: 0.75rem 0;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#bmi" */
+#bmi{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+}
+
+/*#Aqui irá selecionar o último elemento dos irmãos que está dentro do "span" */
+#bmi span:last-child{
+    font-size: 0.875rem;
+    color: #cbd5e1;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#description" */
+#description{
+    width: 15.5rem;
+}
+
+/*#Aqui teremos uma ação de estilização para a o id "#more_info" */
+#more_info{    
+    border-top: 1px solid #ffffff34;
+    padding-top: 1.5rem;
+}
+
+/*#Aqui teremos uma ação para a tag "a", que está dentro do id "#more_info" */
+#more_info a{
+    color: #16a34a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+/*#Aqui teremos uma ação ":hover" para a tag "a", que está dentro do id "#more_info" */
+#more_info a:hover{
+    color: #b5e0b9;
+}
+
+/*#Aqui temos uma classe "hidden" que oculta o display */
+.hidden{
+    display: none;
+}
+
+/*#Aqui temos uma classe "normal" que implementa a cor verde */
+.normal{
+    color: #16a34a;    
+}
+
+/*#Aqui temos uma classe "atencao" que implementa a cor verde */
+.atencao{
+    color: #ffa357;
+}
+
+/*#Aqui temos uma classe "cuidado" que implementa a cor vermelha */
+.cuidado{    
+    color: #dc2626;    
+}
+
+/*### IMPLEMENTAÇÃO DA @MEDIA QUERIES ### */
+/*#
+Medidas:
+    320px — 480px: dispositivos móveis
+    481px — 768px: iPads, tablets
+    769px — 1024px: telas pequenas, laptops
+    1025px — 1200px: desktops, telas grandes
+    1201px e acima —  telas muito grandes, TVs
+*/
+
+
+/*#Aqui abaixo temos a implementação da responsividade, onde quando a tela da máquina */
+/*#atingir uma largura máxima de 768px, será execultada a instrução abaixo */
+@media screen and (max-width: 768px) {
+    /*#Aqui temos a instrução a ser estilizada e executada. */
+    #img_imc {
+        display: none;
+    }
+}
+
+/*#Aqui abaixo temos a implementação da responsividade, onde quando a tela da máquina */
+/*#atingir uma largura máxima de 768px, será execultada a instrução abaixo */
+@media screen and (max-width: 768px) {
+    /*#Aqui temos a instrução a ser estilizada e executada. */
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+    /*#Aqui temos a instrução a ser estilizada e executada. */
+    #calculator{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*#Aqui temos uma estilização dos ícones do Google Icon */
+/* span.material-symbols-outlined{
+    color: green;
+    font-weight: bold;
+    font-size: 3rem;
+    font-style: italic;    
+} */
+
+/*### Aqui nós temos a estilização dos ícones do Google Icon ###*/
+/*## Aqui nós temos o ícone ###*/
+/*
+<span class="material-symbols-outlined">
+    add_circle
+</span>
+
+<span class="material-symbols-outlined">
+    forward_to_inbox
+</span>
+*/
